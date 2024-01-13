@@ -1,10 +1,10 @@
 
-        <?php
+   <?php
 
     
-if(isset($_POST['email']) and isset($_POST['mot de passe']) )
+if(isset($_POST[' adresse email']) and isset($_POST['mot de passe']) )
 {
-    if(!empty($_POST['email']) and !empty($_POST['mot de passe']))
+    if(!empty($_POST[' adresse email']) and !empty($_POST['mot de passe']))
     {
         try
         {
@@ -16,13 +16,13 @@ if(isset($_POST['email']) and isset($_POST['mot de passe']) )
         {
                 die('Erreur : ' . $e->getMessage());
         }
-    $sql1="select * from utilisateur where email='".$_POST['email']."'";
+    $sql1="select * from utilisateur where email='".$_POST[' adresse email']."'";
     $reponse = $bdd->query($sql1);
     $donnees = $reponse->fetch();
 
         if(empty($donnees))
         {   
-            $sql2="insert into utilisateur( email, mot de passe) values('".$_POST['email']."','".$_POST['mot de passe'].")";
+            $sql2="insert into client(  adresse email, mot de passe) values('".$_POST['email']."','".$_POST['mot de passe'].")";
             $bdd->exec($sql2);
             echo"<center>Utilisateur ".$_POST['email']." est ajouté avec succés</center>";
         }
@@ -31,7 +31,3 @@ if(isset($_POST['email']) and isset($_POST['mot de passe']) )
     } 
 }
 ?>
-
-       
-      
-   
