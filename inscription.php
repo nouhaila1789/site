@@ -16,13 +16,13 @@
 			{
 					die('Erreur : ' . $e->getMessage());
 			}
-		$sql1="select * from client where  adresse email='".$_POST['eml']."'";
+		$sql1="select * from client where  adresse Adresse électronique='".$_POST['Adresse électronique']."'";
 		$reponse = $bdd->query($sql1);
 	    $donnees = $reponse->fetch();
 	
 			if(empty($donnees))
 			{   
-				$sql2="insert into client(nom, prenom, Adresse électronique,password,telephone) values('".$_POST['nom']."','".$_POST['prenom']."','".$_POST['Adresse électronique']."','".$_POST['password'].",'".$_POST['telephone'].")";
+				$sql2="insert into utilisateur(nom, prenom, Adresse électronique,password,telephone) values('".$_POST['nom']."','".$_POST['prenom']."','".$_POST['Adresse électronique']."','".$_POST['password'].",'".$_POST['telephone'].")";
 				$bdd->exec($sql2);
 				echo"<center>Utilisateur ".$_POST['nom']." est ajouté avec succés</center>";
 			}
