@@ -6,14 +6,7 @@
         body{
             background-color: rgb(223, 186, 204);
         }
-      .w3docs {
-        margin-left: 70px;
-        font-weight: bold;
-        text-align: left;
-        font-family: sans-serif, bold, Arial, Helvetica;
-        font-size: 14px;
-        
-      }
+     
       .buttons {
         display: flex;
         align-items: center;
@@ -86,8 +79,8 @@
     <script>
       function formulaire() {
         var name = document.forms["RegForm"]["Nom"];
-        var email = document.forms["RegForm"]["Email"];
-        var phone = document.forms["RegForm"]["Téléphone"];
+        var Adresseélectronique = document.forms["RegForm"]["Email"];
+        var Téléphone = document.forms["RegForm"]["Téléphone"];
         var password = document.forms["RegForm"]["Mot de passe"];
      
         if (name.value == "") {
@@ -95,29 +88,25 @@
           name.focus();
           return false;
         }
-        if (address.value == "") {
-          alert("Mettez votre adresse.");
-          address.focus();
-          return false;
-        }
-        if (email.value == "") {
+       
+        if (Adresseélectronique.value == "") {
           alert("Mettez une adresse email valide.");
           email.focus();
           return false;
         }
-        if (email.value.indexOf("@", 0) < 0) {
+        if (Adresseélectronique.value.indexOf("@", 0) < 0) {
           alert("Mettez une adresse email valide.");
           email.focus();
           return false;
         }
-        if (email.value.indexOf(".", 0) < 0) {
+        if (Adresseélectronique.value.indexOf(".", 0) < 0) {
           alert("Mettez une adresse email valide.");
           email.focus();
           return false;
         }
-        if (phone.value == "") {
+        if (Téléphone.value == "") {
           alert("Mettez votre numéro de téléphone.");
-          phone.focus();
+         Téléphone.focus();
           return false;
         }
         if (password.value == "") {
