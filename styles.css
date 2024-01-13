@@ -5,82 +5,8 @@ body {
     padding: 0;
   }
   
-  header {
-    background-color: white;
-    color: black;
-    padding: 4px;
-    text-align: center;
-    font-family: serif;
-    
 
-    align-items: center;
-    justify-content: space-between;
-
-  }
-  .navbar {
-  overflow: hidden;
-  background-color:white; 
-  float:right;
   
-  }
-  
-  .navbar a {
-  position:relative;
-  margin: 8px 10px;
-  
-  color:darkseagreen;
-  text-align: center;
-  text-decoration: none;
-  transition: all ease .50s;
-  font-weight: 500;
-  
-  }
-  
-  .subnav {
-  float: left;
-  overflow: hidden;
-  color: darkseagreen;
-  }
-  
-  .subnav .subnavbtn {
-  font-size: 16px;  
-  border: none;
-  outline: none;
-  color:darkseagreen;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-  }
-  
-  .navbar a:hover, .subnav:hover .subnavbtn {
-  background-color:darkseagreen;
-  color: white;
-  }
-  
-  .subnav-content {
-  display: none;
-  position: absolute;
-  left: 0;
-  background-color:darkseagreen;
-  width: 100%;
-  z-index: 1;
-  }
-  
-  .subnav-content a {
-  float:left;
-  color: black;
-  text-decoration: none;
-  }
-  
-  .subnav-content a:hover {
-  background-color: #eee;
-  color: black;
-  }
-  
-  .subnav:hover .subnav-content {
-  display:block;
-  }
   img{
     float:left;
     width: 4%;
@@ -188,26 +114,7 @@ body {
         
     
       
-      /* Clearfix (clear floats) */
-      .row1::after {
-      content: "";
-      display: table-column-group;
-      clear: both;
-      align-items: stretch;
-      justify-content: space-between;
-      }
-      .header-icons{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        float: right;
-      }
-      .header-icons i{
-        vertical-align: middle;
-        font-size: 1.5rem;
-        margin-bottom: 20px;
-        transition: all ease .50s;
-      }
+    
 
 nav {
   position: absolute;
